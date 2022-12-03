@@ -24,6 +24,7 @@
     "@electron-toolkit/preload": "^1.0.2",
     "@electron-toolkit/utils": "^1.0.2",
     "@radix-ui/react-collapsible": "^1.0.1",
+    "@tanstack/react-query": "^4.19.1",
     "@tiptap/extension-document": "^2.0.0-beta.204",
     "@tiptap/extension-highlight": "^2.0.0-beta.204",
     "@tiptap/extension-placeholder": "^2.0.0-beta.204",
@@ -33,6 +34,7 @@
     "clsx": "^1.2.1",
     "cmdk": "^0.1.20",
     "electron-router-dom": "^1.0.5",
+    "electron-store": "^8.1.0",
     "phosphor-react": "^1.4.1",
     "react-router-dom": "^6.4.4"
   },
@@ -55,6 +57,7 @@
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3",
-    "vite": "^3.2.4"
+    "vite": "^3.2.4",
+    "vite-tsconfig-paths": "^3.6.0"
   }
 }
