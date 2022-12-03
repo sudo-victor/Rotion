@@ -49,14 +49,14 @@ ipcMain.handle(
   },
 )
 
-ipcMain.on(
+ipcMain.handle(
   IPC.DOCUMENTS.SAVE,
   async (_, { id, title, content }: SaveDocumentRequest): Promise<void> => {
     store.set(`documents.${id}`, { id, title, content })
   },
 )
 
-ipcMain.on(
+ipcMain.handle(
   IPC.DOCUMENTS.DELETE,
   async (_, { id }: DeleteDocumentRequest): Promise<void> => {
     // @ts-ignore
