@@ -9,6 +9,8 @@ export function createTray(window: BrowserWindow) {
     { type: 'separator' },
     {
       label: 'Criar novo documento',
+      accelerator: 'CommandOrControl+N',
+      acceleratorWorksWhenHidden: false,
       click: () => {
         window.webContents.send('new-document')
       },
