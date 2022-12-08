@@ -4,7 +4,7 @@ import { Code, CaretDoubleRight, TrashSimple } from 'phosphor-react'
 
 import * as Breadcrumbs from './Breadcrumbs'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { Document } from '@/shared/types/ipc'
 
 interface HeaderProps {
@@ -34,6 +34,11 @@ export function Header({ isSidebarOpen }: HeaderProps) {
       },
     )
 
+  const { data, isFetching } = useQuery(['document', id], async () => {
+    const response = await window.api.fetchDocument({ id: id! })
+    return response.data
+  })
+
   return (
     <div
       id="header"
@@ -60,14 +65,12 @@ export function Header({ isSidebarOpen }: HeaderProps) {
           <Breadcrumbs.Root>
             <Breadcrumbs.Item>
               <Code weight="bold" className="h-4 w-4 text-pink-500" />
-              Estrutura técnica
+              Workspace
             </Breadcrumbs.Item>
             <Breadcrumbs.Separator />
-            <Breadcrumbs.HiddenItems />
-            <Breadcrumbs.Separator />
-            <Breadcrumbs.Item>Back-end</Breadcrumbs.Item>
-            <Breadcrumbs.Separator />
-            <Breadcrumbs.Item isActive>Untitled</Breadcrumbs.Item>
+            <Breadcrumbs.Item isActive>
+              {!isFetching && data?.title}
+            </Breadcrumbs.Item>
           </Breadcrumbs.Root>
 
           <div className="inline-flex region-no-drag">

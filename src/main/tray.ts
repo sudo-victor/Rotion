@@ -16,13 +16,6 @@ export function createTray(window: BrowserWindow) {
       },
     },
     { type: 'separator' },
-    { label: 'Documentos recentes', enabled: false },
-    {
-      label: 'Ignite',
-      accelerator: 'CommandOrControl+1',
-      acceleratorWorksWhenHidden: false,
-    },
-    { type: 'separator' },
     { label: 'Sair', role: 'quit' },
   ])
 
