@@ -4,7 +4,6 @@ import * as Collapsible from '@radix-ui/react-collapsible'
 import * as Navigation from './Navigation'
 import { CaretDoubleLeft } from 'phosphor-react'
 import { CreatePage } from './CreatePage'
-import { Profile } from './Profile'
 import { Search } from './Search'
 import { useQuery } from '@tanstack/react-query'
 
@@ -45,7 +44,6 @@ export function Sidebar() {
           },
         )}
       >
-        <Profile />
         <Search />
 
         <Navigation.Root>
