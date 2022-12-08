@@ -49,14 +49,9 @@ export function Document() {
 
   useEffect(() => {
     function scrollToTop() {
-      const editorElement = document.querySelector('.editor-content')
-      if (!editorElement) return
       setTimeout(() => {
         if (!editorSectionRef.current) return
-        console.log(editorSectionRef.current)
-        console.log(editorSectionRef.current.scrollTop, 'initial')
         editorSectionRef.current.scrollTo(0, 0)
-        console.log(editorSectionRef.current.scrollTop, 'finished')
       }, 100)
     }
     scrollToTop()
