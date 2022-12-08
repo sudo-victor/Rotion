@@ -50,5 +50,7 @@ export function Editor({ content, onContentUpdated }: EditorProps) {
     },
   })
 
-  return <EditorContent className="w-[65ch]" editor={editor} />
+  return (
+    <EditorContent spellCheck={false} className="w-[65ch]" editor={editor} />
+  )
 }
