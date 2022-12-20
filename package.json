@@ -1,7 +1,7 @@
 {
   "name": "rotion",
   "productName": "Rotion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Notion alternative written with Electron",
   "main": "./out/main/index.js",
   "author": "victorsouto.com.br",

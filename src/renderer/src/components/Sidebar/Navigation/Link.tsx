@@ -24,9 +24,28 @@ export function Link({ to, children }: LinkProps) {
       <span className="truncate flex-1">{children}</span>
 
       <div className="flex items-center h-full group-hover:visible ml-auto text-rotion-100">
-        <button className="px-px rounded-sm hover:bg-rotion-500">
+        <button
+          id="dropdownDefault"
+          data-dropdown-toggle="dropdown"
+          className="px-px rounded-sm hover:bg-rotion-500"
+        >
           <DotsThree weight="bold" className="h-4 w-4" />
         </button>
+
+        <div className="dropdown">
+          <ul>
+            <li>
+              <button className="px-px rounded-sm hover:bg-rotion-500">
+                Duplicar
+              </button>
+            </li>
+            <li>
+              <button className="px-px rounded-sm hover:bg-rotion-500">
+                Apagar
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </NavLink>
   )
